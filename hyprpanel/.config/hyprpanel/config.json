@@ -416,6 +416,7 @@
         "netstat"
       ],
       "middle": [
+        "notifications",
         "clock",
         "media"
       ],
@@ -428,5 +429,12 @@
         "power"
       ]
     }
-  }
+  },
+  "menus.dashboard.shortcuts.left.shortcut1.command": "firefox",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "spotify",
+  "menus.dashboard.shortcuts.left.shortcut4.command": "wofi --show drun",
+  "menus.dashboard.shortcuts.right.shortcut3.command": "hyprshot -m region -o $HOME/Pictures/Screenshots/",
+  "theme.bar.buttons.modules.microphone.enableBorder": false,
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.volume.raiseMaximumVolume": true
 }
