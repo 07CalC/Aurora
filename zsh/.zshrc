@@ -138,4 +138,22 @@ alias gch="git checkout"
 alias gf="git fetch"
 # git end
 
+alias vi="nvim"
+
+VAULT_DIR="$HOME/vault"
+
+vault() {
+  if [ $# -eq 0 ]; then
+    vi "$VAULT_DIR"
+  else 
+    vi "$VAULT_DIR/$1"
+  fi
+}
+
+_vault_completion() {
+  local -a dirs
+  dirs=(${(f)"$(ls -1 "$VAULT_DIR")"})
+  _describe 'vault dirs' dirs
+}
+compdef _vault_completion vault
 
