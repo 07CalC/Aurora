@@ -140,20 +140,22 @@ alias gf="git fetch"
 
 alias vi="nvim"
 
-VAULT_DIR="$HOME/vault"
+VAULT_DIR="$HOME/noir"
 
-vault() {
+noir() {
   if [ $# -eq 0 ]; then
+    cd "$VAULT_DIR"
     vi "$VAULT_DIR"
   else 
+    cd "$VAULT_DIR/$1" 
     vi "$VAULT_DIR/$1"
   fi
 }
 
-_vault_completion() {
+_noir_completion() {
   local -a dirs
   dirs=(${(f)"$(ls -1 "$VAULT_DIR")"})
-  _describe 'vault dirs' dirs
+  _describe 'noir dirs' dirs
 }
 compdef _vault_completion vault
 
